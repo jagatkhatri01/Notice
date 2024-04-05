@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ user.username }}'s Profile | Your Website
+{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header bg-primary text-white">
+                    <h3 class="text-center">{{ user.username }}'s Profile</h3>
+                </div>
+                <div class="card-body">
+                    <!-- Display user profile information here -->
+                    <div class="mb-3">
+                        <label class="fw-bold">Email:</label>
+                        
+                        <p class="mb-0">{{ user.email }}</p>
+                        <label class="fw-bold">Department:</label>
+                        <p class="mb-0">{{user.department}}</p>
+                        <!-- Add more profile information as needed -->
+                    </div>
+                    <!-- Add more profile information and styling as needed -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
